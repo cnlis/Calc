@@ -1,0 +1,2 @@
+# Calc
+Simple Lazarus calculator
