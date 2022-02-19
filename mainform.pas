@@ -89,6 +89,8 @@ end;
 
 procedure TCalc.AddComma;
 begin
+  if not changed then
+    number.text := '0';
   if pos(COMMA_SIGN, number.text) = 0 then
     number.text := number.text + COMMA_SIGN;
   changed := true;
@@ -96,6 +98,8 @@ end;
 
 procedure TCalc.ChangeSign;
 begin
+  if not changed then
+    number.text := '0';
   if StrToFloat(number.text) <> 0 then
   begin
     if number.text[1] = '-' then
